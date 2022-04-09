@@ -3,12 +3,12 @@ let thisYear = today.getFullYear();
 let footer = document.querySelector('footer');
 let copyright = document.createElement('p');
 
-copyright.innerHTML = `${'Nicole Ampofo'} ${thisYear}`
+copyright.innerHTML = `Nicole Ampofo ${thisYear}`
 
 // append the copyright element to the footer
-document.body.appendChild(copyright)
+footer.appendChild(copyright)
 
-let skills = ['Front end', 'Back end', 'HTML', 'CSS', 'javascript']
+let skills = ['Front end', 'Back end', 'HTML', 'CSS', 'JavaScript']
 
 let skillsSection = document.getElementById('skills');
 let skillsList = skillsSection.querySelector('ul')
@@ -21,6 +21,6 @@ let skillsList = skillsSection.querySelector('ul')
 for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement('li');
         skill.innerHTML = skills[i];
-        document.body.appendChild(skill);
+        skillsList.appendChild(skill);
 
   }
