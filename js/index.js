@@ -20,6 +20,7 @@ let skillsList = skillsSection.querySelector('ul')
 
 for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement('li');
+        skill.classList.add('skill-block')
         skill.innerHTML = skills[i];
         skillsList.appendChild(skill);
 
@@ -35,21 +36,28 @@ messageForm.addEventListener("submit", (e) => {
 
   messageForm.reset()
 
-  let messageSection = document.querySelector("#messages")
+  let messageSection = document.querySelector('#messages')
   let messageList = messageSection.querySelector("ul")
   let newMessage = document.createElement('li')
 
-  newMessage.innerHTML = `<a href = "mailto:${email.value}" target "_blank"> ${name.value}</a><span> wrote: ${message.value} </span>`
+  newMessage.innerHTML = `<a href="mailto:${email}" target="_blank">${name}</a><span> wrote: ${message} </span>`;
   messageList.appendChild(newMessage)
 
   const removeButton = document.createElement("button")
-  removeButton.textContent="remove"
+  removeButton.innerText = 'Remove'
   removeButton.type = "button"
+
   removeButton.addEventListener("click", (e) => {
-    const entry = removeButton.parentNode
+    const entry = e.target.parentNode;
     entry.remove()
   })
+
   newMessage.appendChild(removeButton)
+  messageList.appendChild(newMessage)
   messageForm.reset()
+
+  // console.log(email)
+  // console.log(message)
+  // console.log(email)
 
 });
