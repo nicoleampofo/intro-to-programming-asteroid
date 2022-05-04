@@ -7,6 +7,10 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <h1>Nicole Ampofo</h1>
@@ -18,10 +22,10 @@
     <section>
         <h1>Experience</h1>
         <ul>
-            <li>Newest member of Code for Boston</li>
-            <li>Code the Dream fellow 2022</li>
-            <li>Intern at Adapt Agency from September 2020 to December 2020</li>
-            <li>Intern at Vertex Pharmaceuticals from June 2021 to September 2021</li>
+            <li class="xp-block">Feb 2021 - present: Newest member of Code for Boston</li>
+            <li class="xp-block">Jan 2022 to Present: Code the Dream fellow 2022</li>
+            <li class="xp-block">Sep 2020 to Dec 2020: Software Engineering Intern at Adapt Agency</li>
+            <li class="xp-block">Jun 2021 to Sep 2021: Software Engineering Intern at Vertex Pharmaceuticals</li>
         </ul>
     </section>
 
@@ -43,12 +47,18 @@
     <section>
         <h2>Leave a Message</h2>
         <form name="leave_message">
-            <label>Name: </label><br>
-            <input type="text", name="name", required>
-            <label>Email: </label><br>
-            <input type="email", name = "email", required>
-            <label>Message: </label><br>
-            <textarea name = "message" required></textarea>
+            <div>
+                <label>Name: </label>
+                <input type="text", name="name", required>
+            </div>
+            <div>
+                <label>Email: </label>
+                <input type="email", name = "email", required>
+            </div>
+            <div>
+                <label>Message: </label>
+                <textarea name = "message" required></textarea>
+            </div>
             <button type="submit">Submit</button>
         </form>
     </section>
@@ -56,7 +66,9 @@
         <h2>Messages</h2>
         <ul></ul>
     </section>
-    <footer></footer>
+    <div>
+        <footer></footer>
+    </div>
 <script src="js/index.js"></script>
 </body>
 </html>

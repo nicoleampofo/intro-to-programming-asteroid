@@ -1,0 +1,75 @@
+
+body {
+    background-color:#96b7d8;
+    color:#113252;
+    font-family: 'Roboto', sans-serif;
+}
+section {
+    padding: 15px 20px;
+}
+
+h1, h2 {
+    font-size: 30px;
+    font-weight:200;
+    color:rgb(7, 56, 119);
+}
+
+.xp-block {
+    list-style:none;
+    background-color: #cde0f4;
+    border: rgb(7, 56, 119) 2px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 20px 0px;
+    width: 700px;
+}
+
+.skill-block {
+    background-color: rgb(7, 56, 119);
+    color: #cde0f4;;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1000px){
+    .xp-block{
+        width: 50%;
+    }
+}
+
+label {
+    font-size: 18px;
+    color: rgb(56, 54, 54);
+    margin: 0px 50px;
+}
+
+input, textarea {
+    border: rgb(7, 56, 119) 2px solid;
+    border-radius: 10px;
+    margin: 50px;
+    height: 80px;
+    width: 50%;
+    display: block;
+    background-color:#cde0f4;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    border-radius: 8px;
+    background-color:#113252;
+    color:#cde0f4;
+    margin-left: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
