@@ -13,14 +13,25 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href=#about>About</a></li>
+                <li><a href=#experience>Experience</a></li>
+                <li><a href=#skills>Skills</a></li>
+                <li><a href=#connect>Connect</a></li>
+                <li><a href=#message>Leave A Message</a></li>
+            </ul>
+        </nav>
+    </header>
     <h1>Nicole Ampofo</h1>
     <section>
-        <h1>About</h1>
+        <h1 id="about">About</h1>
         <p>I'm a software engineer with a passion for public health and social sciences. I have studied Social Psychology and Public Health and am interested in the intersection of health and technology. In my spare time, I like to crochet, read, and go on long drives.</p>
     </section>
 
     <section>
-        <h1>Experience</h1>
+        <h1 id="experience">Experience</h1>
         <ul>
             <li class="xp-block">Feb 2021 - present: Newest member of Code for Boston</li>
             <li class="xp-block">Jan 2022 to Present: Code the Dream fellow 2022</li>
@@ -36,26 +47,26 @@
         </ul>
     </section>
 
-    <section>
-        <h1>Connect</h1>
+    <section >
+        <h1 id="connect">Connect</h1>
         <ul>
-            <li><a href = "http://www.github.com/nicoleampofo">Github</a></li>
-            <li><a href = "http://www.twitter.com/nicoleampofo">Twitter</a></li>
-            <li><a href = "mailto:nicoleampofodev@gmail.com">Email</a></li>
+            <li><a href = "http://www.github.com/nicoleampofo" id="connection">Github</a></li>
+            <li><a href = "http://www.twitter.com/nicoleampofo" id="connection">Twitter</a></li>
+            <li><a href = "mailto:nicoleampofodev@gmail.com" id="connection">Email</a></li>
         </ul>
     </section>
     <section>
-        <h2>Leave a Message</h2>
+        <h2 id="message">Leave a Message</h2>
         <form name="leave_message">
-            <div>
+            <div class="message-flex">
                 <label>Name: </label>
                 <input type="text", name="name", required>
             </div>
-            <div>
+            <div class="message-flex">
                 <label>Email: </label>
                 <input type="email", name = "email", required>
             </div>
-            <div>
+            <div class="message-flex">
                 <label>Message: </label>
                 <textarea name = "message" required></textarea>
             </div>
