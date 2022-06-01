@@ -53,19 +53,16 @@ messageForm.addEventListener('submit', (e) => {
   newMessage.appendChild(removeButton)
   messageList.appendChild(newMessage)
   messageForm.reset()
+})
 
   let githubRequest = new XMLHttpRequest();
   githubRequest.open('GET', 'https://api.github.com/users/nicoleampofo/repos');
 
   githubRequest.send();
 
-  document.getElementById('load', function() {
-  function sendAJAX(){
+  document.addEventListener('load', function() {
     let repositories = JSON.parse(this.response);
     console.log(repositories);
-    };
-
-    sendAJAX('hello');
 
     let projectSection = document.getElementById('projects');
     let projectList = projectSection.querySelector('ul');
