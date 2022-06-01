@@ -28,34 +28,47 @@ for (let i = 0; i < skills.length; i++) {
 
 let messageForm = document.querySelector('[name="leave_message"]')
 
-messageForm.addEventListener("submit", (e) => {
+messageForm.addEventListener('submit', (e) => {
   e.preventDefault()
-  const name = e.target.name.value;
-  const email = e.target.email.value
-  const message = e.target.message.value
+  let name = e.target.name.value;
+  let email = e.target.email.value
+  let message = e.target.message.value
 
   let messageSection = document.querySelector('#messages')
-  let messageList = messageSection.querySelector("ul")
+  let messageList = messageSection.querySelector('ul')
   let newMessage = document.createElement('li')
 
   newMessage.innerHTML = `<a href="mailto:${email}" target="_blank">${name}</a><span> wrote: ${message} </span>`;
   messageList.appendChild(newMessage)
 
-  const removeButton = document.createElement("button")
+  let removeButton = document.createElement('button')
   removeButton.innerText = 'Remove'
-  removeButton.type = "button"
+  removeButton.type = 'button'
 
-  removeButton.addEventListener("click", (e) => {
-    const entry = e.target.parentNode;
+  removeButton.addEventListener('click', (e) => {
+    let entry = e.target.parentNode;
     entry.remove()
   })
 
   newMessage.appendChild(removeButton)
   messageList.appendChild(newMessage)
   messageForm.reset()
+})
 
-  // console.log(email)
-  // console.log(message)
-  // console.log(email)
+  let githubRequest = new XMLHttpRequest();
+  githubRequest.open('GET', 'https://api.github.com/users/nicoleampofo/repos');
 
+  githubRequest.send();
+
+  document.addEventListener('load', function() {
+    let repositories = JSON.parse(this.response);
+    console.log(repositories);
+
+    let projectSection = document.getElementById('projects');
+    let projectList = projectSection.querySelector('ul');
+    for(let i = 0; i < repositories.length; i++){
+      let project = document.createElement('li');
+      project.innerHTML = repositories[i].name;
+      projectList.appendChild(project);
+    }
 });
